@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.row-dragging{
+  display: table;
+  /* color: #fff; */
+  background: #4285f4;
+  border: 1px solid #f0f0f0;
+}

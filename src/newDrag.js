@@ -95,7 +95,23 @@ class BodyRow extends React.Component {
     };
  
     
-    
+    findParentByKey(tree, targetKey, parent = null) {
+        for (const node of tree) {
+          // 检查当前节点是否有children属性
+          if ('children' in node) {
+            // 递归查找子树
+            const foundInSubtree = this.findParentByKey(node.children, targetKey, node);
+            if (foundInSubtree) {
+              return foundInSubtree; // 如果在子树中找到了，直接返回找到的父级对象
+            }
+          }
+          // 检查当前节点的key是否匹配目标key
+          if (node.id === targetKey) {
+            return parent; // 找到了目标key，返回其父级对象
+          }
+        }
+        return null; // 遍历完所有节点都没找到，返回null
+      }
  
     moveRow = (dragIndex, hoverIndex,dragKey,hoverKey) => {
         const { data } = this.state;
@@ -119,7 +135,9 @@ class BodyRow extends React.Component {
                 }
             })
             newData.splice(insertIndex,0,dragObject)
-            console.log(newData)
+            const obj = this.findParentByKey(this.state.data, dragKey)
+            console.log(obj,'obj')
+            console.log(newData,'newData')
             this.setState({data:newData})
         }else{
             message.warning('只能进行同级排序')

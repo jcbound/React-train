@@ -2,9 +2,9 @@
  * @Author       : jcbound
  * @Date         : 2024-06-30 13:35:01
  * @LastEditors  : jcbound
- * @LastEditTime : 2024-06-30 22:41:36
+ * @LastEditTime : 2024-07-02 00:53:47
  * @Description  : 我添加了修改
- * @FilePath     : \my-app\src\dargTest.js
+ * @FilePath     : \React-train\src\dargTest.js
  */
 import React, { Component } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
@@ -46,8 +46,8 @@ class TaskList extends Component {
       <DragDropContext onDragEnd={(result) => handleOnDragEnd(result, this.setTasks)}>
         <Droppable droppableId="tasks">
           {(provided) => (
-            <ul>
-              <tr  ref={provided.innerRef} {...provided.droppableProps}>
+            <ul  ref={provided.innerRef} {...provided.droppableProps}>
+              {/* <tr > */}
               {this.state.tasks.map((task, index) => (
                 <Draggable key={task.id} draggableId={task.id} index={index}>
                   {(provided) => (
@@ -64,7 +64,7 @@ class TaskList extends Component {
                 </Draggable>
               ))}
               {provided.placeholder}
-              </tr>
+              {/* </tr> */}
             </ul>
           )}
         </Droppable>

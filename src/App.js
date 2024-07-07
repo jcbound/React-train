@@ -2,18 +2,18 @@
  * @Author       : jcbound
  * @Date         : 2024-06-30 13:00:47
  * @LastEditors  : jcbound
- * @LastEditTime : 2024-07-01 00:03:47
+ * @LastEditTime : 2024-07-06 18:36:52
  * @Description  : 我添加了修改
- * @FilePath     : \my-app\src\App.js
+ * @FilePath     : \React-train\src\App.js
  */
 import logo from './logo.svg';
 // import './App.css';
 import MyDraggableTable from './test';
 import TaskList from './dargTest';
-import ListApp from './listTest';
+// import ListApp from './listTest';
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import React, { Component } from 'react';
-import TestApp from './newDrag';
+import DraggableTable from './newDrag';
 // import { MultiTableDrag } from "./newDrag";
 function App() {
   return (
@@ -34,9 +34,9 @@ function App() {
       </header>
       <MyDraggableTable></MyDraggableTable>
       {/* <ListApp></ListApp> */}
-      <TaskList></TaskList>
+      {/* <TaskList></TaskList> */}
       {/* <MultiTableDrag></MultiTableDrag> */}
-      <TestApp></TestApp>
+      <DraggableTable></DraggableTable>
     </div>
   );
 }

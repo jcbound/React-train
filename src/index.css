@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.drag-table tr.drop-over-downward td {
+  border-bottom: 2px dashed #1890ff;
+}
+
+.drag-table tr.drop-over-upward td {
+  border-top: 2px dashed #1890ff;
+}

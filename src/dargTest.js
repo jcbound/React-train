@@ -2,9 +2,9 @@
  * @Author       : jcbound
  * @Date         : 2024-06-30 13:35:01
  * @LastEditors  : jcbound
- * @LastEditTime : 2024-07-02 00:19:20
+ * @LastEditTime : 2024-07-02 00:53:47
  * @Description  : 我添加了修改
- * @FilePath     : \my-app\src\dargTest.js
+ * @FilePath     : \React-train\src\dargTest.js
  */
 import React, { Component } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
